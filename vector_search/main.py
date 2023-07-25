@@ -1,7 +1,8 @@
 from fastapi import FastAPI
+from vector_search.api.routes import router
 
 application = FastAPI()
-
+application.include_router(router)
 
 if __name__ == "__main__":
     import uvicorn
